@@ -2,4 +2,9 @@
 
 <p>Find me in app/views/home/index.html.erb</p>
 
-<a href="http://localhost:3000/users/sign_up">sign up</a>
+<% if current_user.present? %>
+  <a href="http://localhost:3000/users/edit">edit</a>
+<% else %>
+  <a href="http://localhost:3000/users/sign_up">sign up</a>
+<% end %>
+
